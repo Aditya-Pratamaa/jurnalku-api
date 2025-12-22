@@ -15,7 +15,7 @@ class AuthController extends Controller
         $request->validate([
             'username' => 'required',
             'password' => 'required'
-        ]);
+        ]); 
 
         $student = Student::where('nis', $request->username)
             ->orWhere('name', $request->username)
